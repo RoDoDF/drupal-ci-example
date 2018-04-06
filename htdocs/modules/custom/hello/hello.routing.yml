@@ -1,0 +1,136 @@
+hello.hello:
+  path: '/hello/{param}'
+  defaults:
+    _title: 'Hello'
+    _controller: '\Drupal\hello\Controller\HelloController::content'
+    param: 'no parameter'
+  requirements:
+    _access: 'TRUE'
+
+
+
+
+
+
+
+hello.hello.node_list:
+  path: '/hello/node-list/{nodetype}'
+  defaults:
+    _title: 'Node list'
+    _controller: '\Drupal\hello\Controller\HelloNodeListController::content'
+    nodetype: ''
+  requirements:
+    _access: 'TRUE'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hello.json:
+  path: '/hello-json'
+  defaults:
+    _controller: '\Drupal\hello\Controller\HelloJsonController::content'
+  requirements:
+    _access: 'TRUE'
+
+hello.ajax:
+  path: '/hello/ajax'
+  defaults:
+    _controller: '\Drupal\hello\Controller\AjaxController::content'
+  requirements:
+    _access: 'TRUE'
+
+hello.webhook:
+  path: '/hello/webhook'
+  defaults:
+    _controller: '\Drupal\hello\Controller\AjaxController::webhook'
+  requirements:
+    _access: 'TRUE'
+
+hello.message_worker:
+  path: '/hello/message_worker'
+  defaults:
+    _controller: '\Drupal\hello\Controller\AjaxController::messageWorker'
+  requirements:
+    _access: 'TRUE'
+
+hello.listing:
+  path: '/hello/listing'
+  defaults:
+    _controller: '\Drupal\hello\Controller\AjaxController::listing'
+  requirements:
+    _access: 'TRUE'
+
+hello.rss:
+  path: '/hello-rss'
+  defaults:
+    _controller: '\Drupal\hello\Controller\HelloRssController::content'
+  requirements:
+    _access: 'TRUE'
+
+hello.node_history:
+  path: '/node/{node}/history'
+  defaults:
+    _title: 'Node update history'
+    _controller: '\Drupal\hello\Controller\HelloNodeHistoryController::content'
+  requirements:
+    _permission: 'view published content'
+
+hello.calculator:
+  path: '/calculator'
+  defaults:
+    _title: 'Calculator'
+    _form: '\Drupal\hello\Form\HelloCalculator'
+  requirements:
+   _access: 'TRUE'
+
+hello.calculator.result:
+  path: '/calculator-result/{result}'
+  defaults:
+    _title: 'Result'
+    _controller: '\Drupal\hello\Controller\HelloCalculatorResult::content'
+    result: ''
+  requirements:
+    _permission: 'access hello'
+
+hello.admin_form:
+  path: '/admin/appearance/block-color'
+  defaults:
+    _title: 'Block Color'
+    _form: '\Drupal\hello\Form\HelloAdminForm'
+  requirements:
+    _permission: 'administer hello'
+
+hello.access:
+  path: '/hello-access'
+  defaults:
+    _controller: '\Drupal\hello\Controller\HelloAccessController::content'
+    _title: 'Hello access'
+  requirements:
+    _access_hello: '48'
+
+hello.console_test_controller_hello:
+  path: 'console-test'
+  defaults:
+    _controller: '\Drupal\hello\Controller\ConsoleTestController::hello'
+    _title: 'content'
+  requirements:
+    _permission: 'access content'
+hello.console_test_controller_consoletest:
+  path: 'console'
+  defaults:
+    _controller: '\Drupal\hello\Controller\ConsoleTestController::consoletest'
+    _title: 'content'
+  requirements:
+    _permission: 'access content'

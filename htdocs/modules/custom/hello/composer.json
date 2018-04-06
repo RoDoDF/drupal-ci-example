@@ -1,0 +1,8 @@
+{
+  "name": "trainedpeople/hello",
+  "type": "drupal-custom-module",
+  "description": "My first generated module",
+  "homepage": "https://www.drupal.org/project/dataset_config_entity",
+  "minimum-stability": "dev",
+  "require": { }
+}

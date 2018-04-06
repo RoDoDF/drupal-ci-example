@@ -1,0 +1,6 @@
+hello:
+  css:
+    theme:
+      css/hello.css: {}
+#  js:
+#    js/auto.js: {}
