@@ -10,7 +10,7 @@
         "drush/drush": "8.*"
     },
     "require-dev": {
-        "phpunit/phpunit": "5.*"
+        "phpunit/phpunit": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
